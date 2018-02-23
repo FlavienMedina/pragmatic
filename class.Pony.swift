@@ -3,7 +3,7 @@ class Pony: Toy {
  var id: Int = _nb
  var type: String = "Pony #\(_nb)"
  init() {
-   print ("\(self.type) is singing -->\nDou-double poney, j'fais izi money \nD'où tu m'connais ? Parle moi en billets violets \nDou-double poney, j'fais izi money")
+   print ("\(self.type) is singing -->\nDou-double poney, j'fais izi money \nD'où tu m'connais ? Parle moi en billets violets \nDou-double poney, j'fais izi money\n")
    Pony._nb += 1
  }
  func isMoved(){

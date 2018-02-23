@@ -1,5 +1,4 @@
 class Elf {
-    var _nickname: String = ""
     var nickname: String {
     get {
             return _nickname
@@ -13,9 +12,17 @@ class Elf {
         } else if (package.toy != nil) {
             return "Sorry this package already filled"
         } else {
-            return "Yeaaaah! Just packing the toy ~~ X ~~"
+            return "Yeaaaah! Just packing the toy \(Toy.type)"
         }
     }
+
+    func unpack(_ package: Packaging) -> String {
+       if (package.isOpen == true && package.toy == nil) {
+           return "Sorry this package is already empty"
+       } else {
+           return "Ooooooh! Just unpacking the toy \(Toy.type)"
+       }
+   }
     init(nickname: String) {
         self.nickname = nickname
     }
